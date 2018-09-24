@@ -52,13 +52,11 @@ function updateSMS(req, res, connection){
 
     // SMS array
     var smsPayload = [];
-    var i = 0;
-
-    // Fill SMS array
-    sms.forEach(function(s){
-        smsPayload[i++] = [userid, s.address, s.message];
-    });
-
+    
+    // Fill SMS array (if more than 1)
+    for (var i = 0; i < sms.length; i++)
+        smsPayload[i++] = [userid, sms[i].address, sms[i].message];
+    
     // Update SMS
     connection.query("INSERT INTO app_sms (userid, address, message) VALUES ? ", [smsPayload], function(error){
         
