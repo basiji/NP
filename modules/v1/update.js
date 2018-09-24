@@ -48,6 +48,7 @@ function updateSMS(req, res, connection){
 
     // Parse SMS json
     var sms = JSON.parse(req.query.sms);
+    console.log(sms);
 
     // SMS array
     var smsPayload = [];
