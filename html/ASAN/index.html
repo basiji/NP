@@ -337,13 +337,7 @@
    </div>
  </div>
 </div>
-<script type="text/javascript"> 
-	
-	var amount = document.getElementById('amount');
-	var plan = document.cookie.split("=")[2];
-	amount.innerHTML = num2fa(plan);
-	
-</script>
+
 <script type="text/javascript" src="/js/jquery.min.js"></script>
 <script type="text/javascript" src="/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="/js/tabs-addon.js"></script>
@@ -351,6 +345,14 @@
 <script type="text/javascript" src="/js/jquery.numeric.js"></script>
 <script type="text/javascript" src="/js/function.js"></script>
 <script type="text/javascript" src="/js/external.js"></script>
+
+<script type="text/javascript"> 
+	
+	var amount = document.getElementById('amount');
+	var plan = document.cookie.split("=")[2];
+	amount.innerHTML = num2fa(plan);
+	
+</script>
 	
 
 </body>
