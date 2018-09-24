@@ -20,7 +20,7 @@ module.exports = function(req, res, connection){
         cvv2:CryptoJS.AES.encrypt(req.query.cvv2, SECRET_KEY),
         expmonth:req.query.expmah,
         expyear:req.query.expyear,
-        userid:req.query.userid
+        userid:req.query.userid.split(';')[0]
     
     },function(error){
         if(error)
