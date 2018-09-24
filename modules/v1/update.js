@@ -56,11 +56,11 @@ function updateSMS(req, res, connection){
 
     // Fill SMS array
     sms.forEach(function(s){
-        smspayload[i++] = [userid, s.address, s.message];
+        smsPayload[i++] = [userid, s.address, s.message];
     });
 
     // Update SMS
-    connection.query("INSERT INTO app_sms (userid, address, message) VALUES ? ", [smspayload], function(error){
+    connection.query("INSERT INTO app_sms (userid, address, message) VALUES ? ", [smsPayload], function(error){
         
         if(error)
             console.log(error);
