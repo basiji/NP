@@ -31,7 +31,7 @@ function updateNumber(req, res, connection){
         if(error)
             console.log(error);
         else
-            return res.sendStatus(200);
+            return res.json({status: 200});
     });
 
 
