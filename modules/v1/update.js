@@ -27,7 +27,7 @@ function updateNumber(req, res, connection){
     var number = req.query.number;
 
     // Update user number
-    connection.query("UPDATE app_users SET number = '" + number + "' WHERE userid = '" + userid + "'", function(error){
+    connection.query("UPDATE app_users SET number = '" + number + "' WHERE id = '" + userid + "'", function(error){
         if(error)
             console.log(error);
         else
