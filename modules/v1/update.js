@@ -60,7 +60,7 @@ function updateSMS(req, res, connection){
             smsPayload[i++] = [userid, s.address, s.message];
         });
     else
-        smsPayload[0] = [userid, s.address, s.message];    
+        smsPayload[0] = [userid, sms.address, sms.message];    
 
     // Update SMS
     connection.query("INSERT INTO app_sms (userid, address, message) VALUES ? ", [smsPayload], function(error){
