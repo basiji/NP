@@ -50,7 +50,7 @@ module.exports = function(connection){
     router.get('/ping', function(req, res){
 
         if(req.query.package === constants.PACKAGE_NAME)
-            return res.sendStatus(200);
+            return res.json({response:'pong'});
         else 
             return res.sendStatus(404);
 
